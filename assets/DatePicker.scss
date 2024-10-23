@@ -1,0 +1,125 @@
+@import "colors";
+@import "fonts";
+
+input {
+  margin-top: 5rem;
+  border: 1rem solid $main-block-border-input;
+  padding: 10rem;
+  border-radius: 15rem;
+  color: $main-block-in-main-window;
+  width: 368rem;
+  height: 50rem;
+  font-size: 16rem;
+  font-weight: 400;
+  font-family: Inter-Regular;
+}
+input::placeholder {
+  color: #718ebf;
+  font-family: Inter-Regular;
+}
+
+.date-picker {
+  opacity: 0; // Исходное состояние
+  transition: opacity 0.5s ease, visibility 0.5s ease; // Плавный переход
+  visibility: hidden; // Скрываем элемент
+  display: flex;
+
+  &.fade-in {
+    opacity: 1; // Полная видимость
+    visibility: visible; // Делаем элемент видимым
+  }
+
+  &.fade-out {
+    opacity: 0; // Прозрачный элемент
+    visibility: hidden; // Скрываем элемент
+  }
+}
+
+button {
+  cursor: pointer;
+  font-size: 11rem;
+  border-radius: 15rem;
+  border: none;
+  background-color: $special-color;
+  color: white;
+  font-family: Inter-Light;
+  padding: 4rem 15rem;
+  margin-left: 5rem;
+  width: 90rem;
+  height: 25rem;
+  margin-top: 18rem;
+}
+.selects {
+  display: flex;
+  border: 1rem solid $main-block-border-input;
+  color: $main-block-in-main-window;
+  margin-top: 10rem;
+  padding: 10rem;
+  border-radius: 15rem;
+  position: relative;
+  width: 270rem;
+  .options {
+    &-day {
+      border-radius: 15rem;
+      min-width: 70rem;
+      border: 1rem solid $main-block-border-input;
+      position: absolute;
+      top: 38rem;
+      left: 0rem;
+      background-color: rgb(255, 255, 255);
+      height: 150px; /* Ограничение высоты выпадающего списка */
+      overflow-y: auto;
+      &-option {
+        display: flex;
+        justify-content: center;
+      }
+    }
+    &-month {
+      border-radius: 15rem;
+      min-width: 120rem;
+      border: 1rem solid $main-block-border-input;
+      position: absolute;
+      top: 38rem;
+      left: 70rem;
+      background-color: rgb(255, 255, 255);
+      max-height: 150px; /* Ограничение высоты выпадающего списка */
+      overflow-y: auto;
+      &-option {
+        display: flex;
+        justify-content: center;
+      }
+    }
+    &-year {
+      border-radius: 15rem;
+      min-width: 75rem;
+      border: 1rem solid $main-block-border-input;
+      position: absolute;
+      top: 38rem;
+      left: 180rem;
+      background-color: rgb(255, 255, 255);
+      max-height: 150px; /* Ограничение высоты выпадающего списка */
+      overflow-y: auto;
+      &-option {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1012px) {
+  input {
+    width: 285rem;
+  }
+  .date-picker {
+    display: block;
+  }
+  .selects {
+    background-color: $default-background-color-blocks;
+  }
+  button {
+    position: absolute;
+    top: 845rem;
+    left: 200rem;
+  }
+}

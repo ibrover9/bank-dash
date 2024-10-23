@@ -1,0 +1,66 @@
+@import "colors";
+@import "fonts";
+
+.left-menu {
+  min-height: 1024rem;
+  max-width: 309rem;
+  min-width: 309rem;
+  background-color: $default-background-color-blocks;
+}
+.background {
+  display: flex;
+  align-items: center;
+  width: 6rem;
+  margin-bottom: 5rem;
+}
+.object {
+  max-width: 309rem;
+  min-width: 309rem;
+  display: flex;
+  align-items: center;
+  margin-top: 20rem;
+  margin-bottom: 20rem;
+
+  transition: opacity 0.3s ease-in-out, visibility 0s 0.3s;
+  .background-blue-rectangle {
+    opacity: 0;
+    width: 5rem;
+    margin-right: 70rem;
+    transition: opacity 0.3s ease-in-out, visibility 0s 0.3s;
+  }
+  &:hover {
+    .background-blue-rectangle {
+      opacity: 1;
+    }
+    .object-icon {
+      filter: brightness(0) saturate(100%) invert(25%) sepia(100%)
+        saturate(500%) hue-rotate(180deg);
+    }
+    .object-title {
+      color: #0000ff;
+    }
+  }
+  &-icon {
+    width: 25rem;
+    margin-right: 25rem;
+    transition: filter 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    filter: brightness(0) saturate(100%) invert(74%) sepia(0%) saturate(0%)
+      hue-rotate(0deg);
+  }
+  &-title {
+    font-family: Inter;
+
+    font-size: 18rem;
+    color: $left-menu-object;
+    transition: color 0.3s ease-in-out;
+  }
+}
+
+@media screen and (max-width: 1012px) {
+  .left-menu {
+    display: none;
+  }
+  // h1 {
+  //   margin: 21rem 0 0 15rem;
+  // }
+}

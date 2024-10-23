@@ -1,0 +1,23 @@
+@import "colors";
+@import "fonts";
+
+.main-page {
+  min-height: 1024rem;
+  max-width: 1440rem;
+
+  display: flex;
+}
+
+.vertical-line {
+  width: 1rem; /* Ширина вертикальной линии */
+  min-height: 1024rem;
+  background-color: $layout-line; /* Цвет линии */
+}
+
+@media screen and (max-width: 1012px) {
+  .main-page {
+    max-width: 375rem;
+
+    display: flex;
+  }
+}

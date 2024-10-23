@@ -1,0 +1,18 @@
+@import "colors";
+@import "fonts";
+
+.main-block {
+  margin: 50rem;
+  padding: 30rem;
+  background-color: white;
+  width: 1010rem;
+  border-radius: 25rem;
+}
+
+@media screen and (max-width: 1012px) {
+  .main-block {
+    margin: 20rem;
+    padding: 30rem 20rem;
+    width: 325rem;
+  }
+}

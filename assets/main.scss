@@ -1,0 +1,41 @@
+@import "colors";
+@import "fonts";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway";
+}
+
+html {
+  font-size: 0.06944vw;
+
+  height: 100%;
+}
+body {
+  background-color: $default-window;
+  font-size: 16rem;
+  background-color: #f5f7fa;
+}
+
+input,
+select,
+option {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  font-family: Inter;
+  font-size: 12rem;
+}
+
+@media screen and (max-width: 1012px) {
+  html {
+    font-size: 0.2778vw;
+  }
+  // h1 {
+  //   margin: 21rem 0 0 15rem;
+  // }
+}

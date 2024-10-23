@@ -1,0 +1,189 @@
+@import "colors";
+@import "fonts";
+
+body {
+}
+img {
+  vertical-align: middle; /* Выравнивание изображения */
+}
+
+.interface {
+  background-color: $default-background-color-blocks;
+  min-width: 1340rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &-left {
+    display: flex;
+    align-items: center;
+  }
+  &-center {
+    display: none;
+  }
+  &-right {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.mobile-menu {
+  display: none;
+}
+
+.logo {
+  margin-left: 30rem;
+  margin-right: 30rem;
+  width: 249rem;
+  display: flex;
+  justify-content: center;
+  &-img {
+    min-width: 183rem;
+    max-width: 183rem;
+  }
+}
+
+.title {
+  margin-left: 50rem;
+  font-size: 28rem;
+  font-family: Inter;
+  font-weight: 600;
+}
+
+.input {
+  background-color: $layouts-input;
+  min-height: 50rem;
+  min-width: 255rem;
+  max-width: 255rem;
+  margin-right: 20rem;
+  border-radius: 40rem;
+  display: flex;
+  align-items: center;
+  &-icon {
+    background-color: $layouts-input;
+    margin-left: 20rem;
+    max-width: 20rem;
+    min-width: 20rem;
+  }
+
+  &-text {
+    padding-left: 20rem;
+    color: $layouts-input-text;
+    font-family: inter;
+    background-color: $layouts-input;
+    max-height: 20rem;
+    max-width: 172rem;
+    font-size: 15rem;
+  }
+}
+
+.button {
+  margin-right: 30rem;
+  background-color: $layouts-input;
+  border-radius: 40rem;
+  &-icon {
+    margin: 10rem;
+    width: 25rem;
+  }
+}
+
+.profile {
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+  margin-right: 50rem;
+  &-icon {
+    width: 70rem;
+  }
+}
+
+.vertical-line {
+  width: 1rem; /* Ширина вертикальной линии */
+  height: 100rem; /* Высота линии */
+  background-color: $layout-line; /* Цвет линии */
+}
+
+.input-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 1012px) {
+  .interface {
+    min-width: 359rem;
+    max-width: 359rem;
+    padding-top: 15rem;
+    padding-bottom: 5rem;
+  }
+
+  .interface-left {
+    .vertical-line {
+      display: none;
+    }
+    .title {
+      display: none;
+    }
+  }
+
+  .interface-center {
+    display: block;
+
+    .title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50rem;
+      margin-left: 0rem;
+      font-size: 20rem;
+    }
+    height: 50rem;
+  }
+
+  .mobile-menu {
+    display: block;
+    margin-left: 20rem;
+    margin-right: 20rem;
+    img {
+      width: 18rem;
+    }
+  }
+  .logo {
+    display: none;
+  }
+  .title {
+    size: 14rem;
+    color: $main-header-title-mobile;
+    font-family: Inter-Regular;
+  }
+  .button {
+    display: none;
+  }
+  .input {
+    display: none;
+  }
+  .profile {
+    width: 35rem;
+    margin-left: 15rem;
+    margin-right: 15rem;
+    &-icon {
+      width: 35rem;
+    }
+  }
+  .input-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 364rem;
+
+    background-color: $default-background-color-blocks;
+    .input {
+      min-width: 324rem;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      min-height: 44rem;
+      margin-top: 10rem;
+      margin-bottom: 20rem;
+      input {
+        font-family: Inter-regular;
+      }
+    }
+  }
+}
